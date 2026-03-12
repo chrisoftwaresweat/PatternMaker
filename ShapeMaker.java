@@ -1,6 +1,6 @@
 import java.util.Scanner;
 //SECOND PROJECT AS A BEGINNER(REWRITTEN)
-public class PatternMaker {
+public class ShapeMaker {
     public static void square(Scanner scanner) {
         System.out.print("Enter the length&width: ");
         int n = scanner.nextInt();
