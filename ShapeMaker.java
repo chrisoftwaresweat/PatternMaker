@@ -236,9 +236,6 @@ public class ShapeMaker {
                 case "triangle":
                     triangle(scanner);
                     break;
-                case "exit":
-                    System.out.println("Thank you for playing with us. Come again!");
-                    break;
                 case "hourglass":
                     hourglass(scanner);
                     break;
@@ -247,6 +244,9 @@ public class ShapeMaker {
                     break;
                 case "heart":
                     heart();
+                    break;
+                case "exit":
+                    System.out.println("Thank you for playing with us. Come again!");
                     break;
                 default:
                     System.out.println("INVALID ANSWER!");
