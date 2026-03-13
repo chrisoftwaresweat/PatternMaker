@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//SECOND PROJECT AS A BEGINNER(REWRITTEN)
+//SECOND PROJECT AS A BEGINNER
 public class ShapeMaker {
     public static void square(Scanner scanner) {
         System.out.print("Enter the length&width: ");
@@ -49,61 +49,70 @@ public class ShapeMaker {
         String triChoice = scanner.nextLine().trim().toLowerCase();
         switch (triChoice) {
             case "center":
-                System.out.print("How many rows for the centered triangle?: ");
-                int c = scanner.nextInt();
-                scanner.nextLine();
-                if (c <= 0) {
-                    System.out.println("ROWS CANNOT BE ZERO!");
-                } else {
-                    for (int i = 1; i <= c; i++) {
-                        for (int j = i; j <= c; j++) {
-                            System.out.print("  ");
-                        }
-                        for (int k = 1; k < i; k++) {
-                            System.out.print("* ");
-                        }
-                        for (int h = 1; h <= i; h++) {
-                            System.out.print("* ");
-                        }
-                        System.out.println();
-                    }
-                }
-                break;
-            case "left":
-                System.out.print("How many rows for the left sided triangle?: ");
-                int r = scanner.nextInt();
-                scanner.nextLine();
-                if (r <= 0) {
-                    System.out.println("ROWS CANNOT BE ZERO!");
-                } else {
-                    for (int i = 1; i <= r; i++) {
-                        for (int j = 1; j <= i; j++) {
-                            System.out.print("* ");
-                        }
-                        System.out.println();
-                    }
-                }
+                centerTri(scanner);
                 break;
             case "right":
-                System.out.print("How many rows for the right sided triangle?: ");
-                int le = scanner.nextInt();
-                scanner.nextLine();
-                if (le <= 0) {
-                    System.out.println("ROWS CANNOT BE ZERO!");
-                } else {
-                    for (int i = 1; i <= le; i++) {
-                        for (int j = i; j <= le; j++) {
-                            System.out.print("  ");
-                        }
-                        for (int k = 1; k <= i; k++) {
-                            System.out.print("* ");
-                        }
-                        System.out.println();
-                    }
-                }
+                rightTri(scanner);
+                break;
+            case "left":
+                leftTri(scanner);
                 break;
             default:
                 System.out.println("Invalid answer!");
+        }
+    }
+    public static void centerTri(Scanner scanner){
+        System.out.print("How many rows for the centered triangle?: ");
+        int c = scanner.nextInt();
+        scanner.nextLine();
+        if (c <= 0) {
+            System.out.println("ROWS CANNOT BE ZERO!");
+        } else {
+            for (int i = 1; i <= c; i++) {
+                for (int j = i; j <= c; j++) {
+                    System.out.print("  ");
+                }
+                for (int k = 1; k < i; k++) {
+                    System.out.print("* ");
+                }
+                for (int h = 1; h <= i; h++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+    }
+    public static void rightTri(Scanner scanner){
+        System.out.print("How many rows for the right sided triangle?: ");
+        int le = scanner.nextInt();
+        scanner.nextLine();
+        if (le <= 0) {
+            System.out.println("ROWS CANNOT BE ZERO!");
+        } else {
+            for (int i = 1; i <= le; i++) {
+                for (int j = i; j <= le; j++) {
+                    System.out.print("  ");
+                }
+                for (int k = 1; k <= i; k++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+    }
+    public static void leftTri(Scanner scanner){
+        System.out.print("How many rows for the left sided triangle?: ");
+        int r = scanner.nextInt();
+        scanner.nextLine();
+        if (r <= 0) {
+            System.out.println("ROWS CANNOT BE ZERO!");
+        } else {
+            for (int i = 1; i <= r; i++) {
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
         }
     }
     public static void hourglass(Scanner scanner) {
